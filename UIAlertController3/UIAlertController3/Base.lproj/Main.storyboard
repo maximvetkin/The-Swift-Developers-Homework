@@ -1,24 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="21r-nn-Zex">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIAlertController3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LsD-nT-shU">
+                                <rect key="frame" x="16" y="111" width="361" height="687"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag4-px-EWH">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="1dN-RS-1ll"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycS-Y9-NIu">
+                                        <rect key="frame" x="0.0" y="128.66666666666666" width="361" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="WSd-sf-wQB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTh-pa-mWI" userLabel="topButton">
+                                        <rect key="frame" x="0.0" y="257.33333333333331" width="361" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.17482887180000001" blue="0.071226535320000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="GXl-Qh-bxa"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sum">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sumButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4T5-gf-jsz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26N-jm-RO6">
+                                        <rect key="frame" x="0.0" y="385.66666666666669" width="361" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="kYo-eR-sX4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-30-Avf" userLabel="middleButton">
+                                        <rect key="frame" x="0.0" y="514.33333333333337" width="361" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.17482887180000001" blue="0.071226535320000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="q9h-5r-DxV"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Guess the number">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="guessButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuI-Eg-G9b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGS-BA-net" userLabel="bottomButton">
+                                        <rect key="frame" x="0.0" y="643" width="361" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.17482887180000001" blue="0.071226535320000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="6KR-7x-98U"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next screen"/>
+                                        <connections>
+                                            <action selector="nextScreenButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="55b-8v-hj4"/>
+                                            <segue destination="ETt-Wg-ez1" kind="show" id="2LY-P2-JcS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="LsD-nT-shU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mxb-fK-88Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LsD-nT-shU" secondAttribute="trailing" constant="16" id="TgC-Fa-jKu"/>
+                            <constraint firstItem="LsD-nT-shU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="lc6-62-rH2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LsD-nT-shU" secondAttribute="bottom" constant="20" id="sMS-2s-UcR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QfX-BP-Jad"/>
+                    <connections>
+                        <outlet property="guessButton" destination="Jbj-30-Avf" id="0s2-mE-zIa"/>
+                        <outlet property="guessLabel" destination="26N-jm-RO6" id="yas-zY-8Tk"/>
+                        <outlet property="nameLabel" destination="ag4-px-EWH" id="LgA-aa-Xw8"/>
+                        <outlet property="nextScreenButton" destination="xGS-BA-net" id="fhY-3O-xhI"/>
+                        <outlet property="sumButton" destination="iTh-pa-mWI" id="ux2-sp-ufg"/>
+                        <outlet property="sumLabel" destination="ycS-Y9-NIu" id="EdD-MP-Uhb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="927.48091603053433" y="3.5211267605633805"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="uV9-EH-coh">
+            <objects>
+                <viewController id="ETt-Wg-ez1" customClass="SecondViewController" customModule="UIAlertController3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mG2-Ih-1Um">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkv-lc-DQF" userLabel="topButton">
+                                <rect key="frame" x="16" y="404" width="361" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.17482887180000001" blue="0.071226535320000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0Ba-wG-EjZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="fLK-yI-l1o"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reverse the word">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reverseButtonPushed:" destination="ETt-Wg-ez1" eventType="touchUpInside" id="uza-aR-jmx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reversed word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-8d-L4G">
+                                <rect key="frame" x="16" y="311" width="361" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="IzD-t9-br4"/>
+                                    <constraint firstAttribute="height" constant="44" id="q6D-EK-crr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sO5-9W-7c8"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="b0A-8d-L4G" firstAttribute="leading" secondItem="sO5-9W-7c8" secondAttribute="leading" constant="16" id="2DO-8c-D0e"/>
+                            <constraint firstItem="vkv-lc-DQF" firstAttribute="centerY" secondItem="mG2-Ih-1Um" secondAttribute="centerY" id="5ES-dv-H6Z"/>
+                            <constraint firstItem="sO5-9W-7c8" firstAttribute="trailing" secondItem="b0A-8d-L4G" secondAttribute="trailing" constant="16" id="BJP-s3-ZnO"/>
+                            <constraint firstItem="vkv-lc-DQF" firstAttribute="leading" secondItem="sO5-9W-7c8" secondAttribute="leading" constant="16" id="QNV-9Y-sLD"/>
+                            <constraint firstItem="sO5-9W-7c8" firstAttribute="trailing" secondItem="vkv-lc-DQF" secondAttribute="trailing" constant="16" id="aE2-Ty-BGu"/>
+                            <constraint firstItem="vkv-lc-DQF" firstAttribute="top" secondItem="b0A-8d-L4G" secondAttribute="bottom" constant="49" id="fpR-Dv-68Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EAB-tr-0Th"/>
+                    <connections>
+                        <outlet property="reverseButton" destination="vkv-lc-DQF" id="WnS-8F-Nc1"/>
+                        <outlet property="reverseLabel" destination="b0A-8d-L4G" id="pCV-SL-6rl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyX-gB-FDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQi-bX-NuG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="21r-nn-Zex" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1vi-Oi-XNh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mbj-7K-zPB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-3N-ye5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
